@@ -1,20 +1,12 @@
 package com.example.geekmedia.presentation.ui.profile
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.geekmedia.R
+import com.example.geekmedia.databinding.FragmentProfileBinding
+import com.example.geekmedia.presentation.base.BaseFragment
 
-class ProfileFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): FragmentProfileBinding {
+        return FragmentProfileBinding.inflate(layoutInflater)
     }
 
 }

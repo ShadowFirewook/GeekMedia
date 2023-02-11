@@ -1,20 +1,12 @@
 package com.example.geekmedia.presentation.ui.search_menu
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.geekmedia.R
+import com.example.geekmedia.databinding.FragmentSearchMenuBinding
+import com.example.geekmedia.presentation.base.BaseFragment
 
-class SearchMenuFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.fragment_search_menu, container, false)
+class SearchMenuFragment : BaseFragment<FragmentSearchMenuBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): FragmentSearchMenuBinding {
+        return FragmentSearchMenuBinding.inflate(layoutInflater)
     }
 
 }

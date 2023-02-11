@@ -1,20 +1,12 @@
 package com.example.geekmedia.presentation.ui.news
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.geekmedia.R
+import com.example.geekmedia.databinding.FragmentNewsBinding
+import com.example.geekmedia.presentation.base.BaseFragment
 
-class NewsFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.fragment_news, container, false)
+class NewsFragment : BaseFragment<FragmentNewsBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): FragmentNewsBinding {
+        return FragmentNewsBinding.inflate(layoutInflater)
     }
 
 }
