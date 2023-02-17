@@ -6,4 +6,8 @@
     <string name="search_menu">Search Menu</string>
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
+    <string name="news_ru">Новости</string>
+    <string name="search_ru">Поиск</string>
+    <string name="favorites_ru">Избранное</string>
+    <string name="profile_ru">Профиль</string>
 </resources>

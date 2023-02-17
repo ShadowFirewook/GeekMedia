@@ -3,7 +3,6 @@ package com.example.geekmedia.presentation.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -32,16 +31,16 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.searchMenuFragment, R.id.favoritesFragment, R.id.profileFragment, R.id.newsFragment
+                R.id.navigation_home, R.id.navigation_search_menu, R.id.navigation_favorites, R.id.navigation_profile, R.id.newsFragment
             )
         )
 
-        navController?.let { setupActionBarWithNavController(it, appBarConfiguration) }
+        setupActionBarWithNavController(navController!!, appBarConfiguration)
     }
 
     private fun setupNavView(){
         val navView: BottomNavigationView = binding.navView
-        navController?.let { navView.setupWithNavController(it) }
+        navView.setupWithNavController(navController!!)
     }
 
 }
