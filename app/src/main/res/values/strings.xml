@@ -6,4 +6,6 @@
     <string name="search_menu">Search Menu</string>
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
+    <string name="избранное">Избранное</string>
+    <string name="новости">новости</string>
 </resources>
