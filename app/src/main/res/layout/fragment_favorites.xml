@@ -18,7 +18,7 @@
         android:textSize="32sp"
         android:textColor="@color/black"
         android:paddingTop="16dp"
-        android:paddingLeft="12dp"/>
+        android:paddingStart="12dp"/>
 
     <TextView
         android:id="@+id/tv_news"
