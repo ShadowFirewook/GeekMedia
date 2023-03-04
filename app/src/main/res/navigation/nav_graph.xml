@@ -35,4 +35,10 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.geekmedia.presentation.ui.registration_screens.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+
 </navigation>
