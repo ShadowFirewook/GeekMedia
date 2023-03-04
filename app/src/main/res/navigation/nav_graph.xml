@@ -27,7 +27,7 @@
         android:id="@+id/searchMenuFragment"
         android:name="com.example.geekmedia.presentation.ui.search_menu.SearchMenuFragment"
         android:label="fragment_search_menu"
-        tools:layout="@layout/fragment_search_menu" />
+        tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/profileFragment"
