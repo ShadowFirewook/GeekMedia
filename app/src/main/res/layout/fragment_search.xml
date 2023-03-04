@@ -1,236 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.ui.search_menu.SearchMenuFragment">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
+<EditText
 
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="12dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginVertical="8dp"
-            android:src="@drawable/ic_back"
-            android:visibility="gone"/>
+    app:layout_constraintEnd_toStartOf="@+id/btn_search_settings"
+    app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_news"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            app:queryHint="@string/find_article"
-            app:iconifiedByDefault="false"
-            android:background="@color/light_grey"
-            android:layout_gravity="center"
-            android:layout_marginVertical="8dp"/>
 
-        <ImageView
-            android:id="@+id/iv_settings"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/ic_settings"/>
+    <Button
+        android:id="@+id/btn_search_settings"
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/search3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/container_categories"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/events_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_events_category"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_events_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/events"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/project_management_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_project_management_category"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_project_management_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/project_management"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mobile_development_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_phone"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_mobile_development_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mobile_development"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/web_development_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_web_development"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_web_development_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/web_development"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/frontend_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_frontend_category"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_frontend_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Frontend"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/backend_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_backend_category"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/tv_backend_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/backend"
-                android:textSize="28sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/andika_new_basic"
-                android:layout_marginStart="88dp"
-                android:layout_marginVertical="12dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_news"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_news"
-        android:layout_marginHorizontal="16dp"
-        android:visibility="gone"/>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
+    <TextView
+        android:id="@+id/text_search"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"/>
+        android:text="@string/nothing_found_for_your_request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search1"
+    app:layout_constraintBottom_toTopOf="@+id/text_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
