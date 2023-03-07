@@ -1,10 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
     tools:context=".presentation.ui.registration_screens.RegistrationFragment">
 
+    <ImageView
+        android:id="@+id/geeklogo"
+        android:paddingLeft="120dp"
+        android:paddingTop="100dp"
+        android:src="@drawable/geekmedia_logo_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="130sp"
+        android:paddingEnd="140sp"
+        android:paddingTop="60sp"
+        android:paddingBottom="80sp"
+        android:text="Вход в аккаунт"
+        android:textColor="@color/main_blue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:text="Войти"
+        android:backgroundTint="@color/main_blue"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:paddingLeft="140dp"
+        android:paddingRight="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:text="У вас ещё нет аккаунта?"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
-</FrameLayout>
+    <TextView
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/main_blue"
+        android:text="Регистрация"
+        android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout >
