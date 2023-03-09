@@ -26,7 +26,8 @@
         android:text="Вход в аккаунт"
         android:textColor="@color/main_blue"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <Button
         android:id="@+id/btn_enter"
