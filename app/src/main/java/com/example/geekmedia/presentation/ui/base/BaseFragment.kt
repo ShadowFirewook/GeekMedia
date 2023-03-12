@@ -1,4 +1,4 @@
-package com.example.geekmedia.presentation.base
+package com.example.geekmedia.presentation.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

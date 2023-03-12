@@ -1,12 +1,13 @@
 package com.example.geekmedia.presentation.ui.search_menu
 
 import android.view.LayoutInflater
-import com.example.geekmedia.databinding.FragmentSearchMenuBinding
-import com.example.geekmedia.presentation.base.BaseFragment
+import com.example.geekmedia.databinding.FragmentSearchBinding
 
-class SearchMenuFragment : BaseFragment<FragmentSearchMenuBinding>() {
-    override fun inflateViewBinding(inflater: LayoutInflater): FragmentSearchMenuBinding {
-        return FragmentSearchMenuBinding.inflate(layoutInflater)
+import com.example.geekmedia.presentation.ui.base.BaseFragment
+
+class SearchMenuFragment : BaseFragment<FragmentSearchBinding>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): FragmentSearchBinding {
+        return FragmentSearchBinding.inflate(layoutInflater)
     }
 
 }
