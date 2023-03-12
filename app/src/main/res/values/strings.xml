@@ -6,7 +6,14 @@
     <string name="search">Search</string>
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
+    
     <string name="todo">TODO</string>
-    <string name="Nothing_found_for_your_request">По вашему запросу ничего не найдено</string>
+    
     <string name="nothing_found_for_your_request">По вашему запросу ничего не найдено</string>
+
+    <string name="news_ru">Новости</string>
+    <string name="search_ru">Поиск</string>
+    <string name="favorites_ru">Избранное</string>
+    <string name="profile_ru">Профиль</string>
+
 </resources>
