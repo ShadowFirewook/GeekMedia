@@ -1,12 +1,11 @@
 package com.example.geekmedia.data.remote
 
-import com.example.geekmedia.data.entities.MultiMedia
-import com.example.geekmedia.data.entities.Post
-import com.example.geekmedia.data.entities.Posts
+import com.example.geekmedia.data.entities.MultiMediaEntity
+import com.example.geekmedia.data.entities.PostEntity
+import com.example.geekmedia.data.entities.NewsEntity
+import com.example.geekmedia.data.entities.UserDataEntity
 import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -14,20 +13,24 @@ interface ApiService {
     suspend fun getMedia(
         @Query("page") page :Int,
         @Query("page_size") pageSize :Int
-    ) : Response<MultiMedia>
+    ) : Response<MultiMediaEntity>
 
-    @GET("posts")
-    fun getPosts(
-        @Query("category") category:String,
-        @Query("created_date") createdDate :String,
-        @Query("page") page :Int,
-        @Query("page_size") pageSize :Int
-    ) : Response<Posts>
+    @GET("v1/posts/")
+   suspend fun getNews(
+//        @Query("category") category:String,
+//        @Query("created_date") createdDate :String,
+//       @Query("page") page :Int,
+//       @Query("page_size") pageSize :Int
+    ) : Response<NewsEntity>
 
-    @GET("posts/{id}")
-    fun getUser(
+    @GET("v1/posts/{id}")
+    suspend fun getPost(
         @Path("id") id: Int
-    ) : Response<Post>
+    ) : Response<PostEntity>
 
+    @POST("auth/registration/")
+    suspend fun registerUser(
+        @Body userDataEntity: UserDataEntity
+    ) : Response<UserDataEntity>
 
 }

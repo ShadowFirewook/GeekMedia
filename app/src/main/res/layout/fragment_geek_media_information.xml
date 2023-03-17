@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".presentation.ui.geekmedia_info_fragment.GeekMediaInformationFragment"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/cv_top_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_geekmedia_logo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            android:text="@string/information"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_geekmedia_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/geekmedia_logo_2_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_top_part" />
+
+    <TextView
+        android:id="@+id/tv_edition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/edition"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/iv_geekmedia_logo"
+        app:layout_constraintTop_toBottomOf="@id/iv_geekmedia_logo" />
+
+    <ImageView
+        android:id="@+id/iv_mail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_mail"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="@id/tv_edition"
+        app:layout_constraintTop_toBottomOf="@id/tv_edition" />
+
+    <ImageView
+        android:id="@+id/iv_phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="@id/iv_mail"
+        app:layout_constraintTop_toBottomOf="@id/iv_mail"/>
+
+    <ImageView
+        android:id="@+id/iv_second_phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="@id/iv_phone"
+        app:layout_constraintTop_toBottomOf="@id/iv_phone"/>
+
+    <TextView
+        android:id="@+id/tv_advertising_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/advertising_department"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/iv_geekmedia_logo"
+        app:layout_constraintTop_toBottomOf="@id/iv_second_phone" />
+
+    <ImageView
+        android:id="@+id/iv_third_phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="@id/iv_mail"
+        app:layout_constraintTop_toBottomOf="@id/tv_advertising_department"/>
+
+    <ImageView
+        android:id="@+id/iv_four_phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="@id/iv_mail"
+        app:layout_constraintTop_toBottomOf="@+id/iv_third_phone"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adress"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/tv_advertising_department"
+        app:layout_constraintTop_toBottomOf="@id/iv_four_phone" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_address"
+        app:layout_constraintStart_toStartOf="@id/iv_mail"
+        app:layout_constraintTop_toBottomOf="@id/tv_address"/>
+
+    <TextView
+        android:id="@+id/tv_geekmedia_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/geekmedia_gmail_com"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mail"
+        app:layout_constraintStart_toEndOf="@+id/iv_mail"
+        app:layout_constraintTop_toBottomOf="@id/tv_edition" />
+
+    <TextView
+        android:id="@+id/tv_geekmedia_edition_first_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_996_321_12_34_56"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_phone"
+        app:layout_constraintStart_toStartOf="@+id/tv_geekmedia_mail"
+        app:layout_constraintTop_toTopOf="@+id/iv_phone" />
+
+    <TextView
+        android:id="@+id/tv_geekmedia_edition_second_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_996_700_67_89_01"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_second_phone"
+        app:layout_constraintStart_toStartOf="@+id/tv_geekmedia_edition_first_phone"
+        app:layout_constraintTop_toTopOf="@+id/iv_second_phone" />
+
+    <TextView
+        android:id="@+id/tv_geekmedia_advertising_department_first_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_996_701_12_34_56"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_third_phone"
+        app:layout_constraintStart_toStartOf="@+id/tv_geekmedia_edition_second_phone"
+        app:layout_constraintTop_toTopOf="@+id/iv_third_phone" />
+
+    <TextView
+        android:id="@+id/tv_geekmedia_advertising_department_second_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_996_702_67_89_01"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_four_phone"
+        app:layout_constraintStart_toStartOf="@+id/tv_geekmedia_advertising_department_first_phone"
+        app:layout_constraintTop_toTopOf="@+id/iv_four_phone" />
+
+
+    <TextView
+        android:id="@+id/tv_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_address"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_address"
+        app:layout_constraintStart_toStartOf="@+id/tv_geekmedia_advertising_department_second_phone"
+        app:layout_constraintTop_toTopOf="@+id/iv_address" />
+
+    <ImageView
+        android:id="@+id/iv_whatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp_img"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_geekmedia_edition_second_phone"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_telegramm"
+        app:layout_constraintTop_toTopOf="@+id/tv_geekmedia_edition_second_phone" />
+
+    <ImageView
+        android:id="@+id/iv_telegramm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/telegramm_img"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_whatsapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_whatsapp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
