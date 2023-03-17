@@ -13,14 +13,11 @@ class NewsAdapter(
     private val newsList: ArrayList<News.Item>,
     private val onPostClick:(Int) -> Unit,
     private val onLikeClick: (News.Item) -> Unit,
-    private val onShareClick: (String) -> Unit
+    private val onDislikeClick: (News.Item) -> Unit,
 ) : Adapter<NewsAdapter.NewsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
-        return NewsViewHolder(
-            ItemNewsBinding.inflate(
-                LayoutInflater.from(parent.context),parent,false)
-        )
+        return NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun getItemCount(): Int = newsList.size
@@ -47,10 +44,11 @@ class NewsAdapter(
                 binding.ivLike.isVisible = false
             }
 
-            binding.ivShare.setOnClickListener {
-                onShareClick(item.image)
+            binding.ivLiked.setOnClickListener {
+                onDislikeClick(item)
+                binding.ivLike.isVisible = true
+                binding.ivLiked.isVisible = false
             }
-
         }
     }
 

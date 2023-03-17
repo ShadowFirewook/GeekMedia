@@ -14,11 +14,29 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class NewsRepositoryImpl @Inject constructor(
-    private val apiService: ApiService
+    private val apiService: ApiService,
+    private val likeNewsPrefDataStore: DataStore<Preferences>
+//    private val favoritesNews: ArrayList<News>,
+//    private val favoritePost: ArrayList<News>
     ) : BaseRepository(),NewsRepository {
 
-    override fun getNews(): Flow<Status<News>> = doRequest {
-        apiService.getNews().body()!!.toNews()
+    override fun getNews(/*posts: Posts,category: String,createdDate: String,
+        page:Int,
+        pageSize: Int*/
+    ): Flow<Status<News>> = doRequest {
+        apiService.getNews(/*category,createdDate,page,pageSize*/).body()!!.toNews()
+    }
+
+    override fun likeNews(isLiked:Boolean) = doRequest {
+        likeNewsPrefDataStore.edit {
+            it[LIKED_NEWS] = isLiked
+        }
+    }
+
+    override fun getFavoriteNews(
+        favoritesNews: ArrayList<News.Item>
+    ): Flow<Status<ArrayList<News.Item>>> = doRequest {
+        favoritesNews
     }
 
 }

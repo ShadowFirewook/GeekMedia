@@ -13,7 +13,7 @@ data class PostEntity(
 ) {
     data class ArticleEntity(
         val description: String,
-        val image: String?,
+        val image: String,
         val title: String
     )
 

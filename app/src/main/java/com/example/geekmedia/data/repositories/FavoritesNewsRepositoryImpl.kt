@@ -22,6 +22,6 @@ class FavoritesNewsRepositoryImpl @Inject constructor(
     }
 
     override fun getFavoritesNews(): Flow<Status<List<News.Item>>> = doRequest {
-        favoritesNewsDao.getFavoritesNews().map { it.toItem() }.sortedByDescending { it.created_date_time }
+        favoritesNewsDao.getFavoritesNews().map { it.toItem() }
     }
 }

@@ -16,5 +16,4 @@ class PostRepositoryImpl @Inject constructor(
         apiService.getPost(id).body()!!.toPost()
     }
 
-
 }
