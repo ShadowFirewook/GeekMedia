@@ -12,7 +12,7 @@
         android:icon="@drawable/search_menu_icon_img"/>
 
     <item
-        android:id="@+id/navigation_favorites"
+        android:id="@+id/navigation_favorites_news"
         android:title="@string/favorites_ru"
         android:icon="@drawable/favorites_icon_img"/>
 

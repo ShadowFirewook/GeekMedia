@@ -6,14 +6,45 @@
     <string name="search">Search</string>
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
-    
+
     <string name="todo">TODO</string>
-    
+
     <string name="nothing_found_for_your_request">По вашему запросу ничего не найдено</string>
 
     <string name="news_ru">Новости</string>
     <string name="search_ru">Поиск</string>
     <string name="favorites_ru">Избранное</string>
     <string name="profile_ru">Профиль</string>
+    <string name="it">IT</string>
+    <string name="_01_01_2023">01.01.2023</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="search_for_saved_news_ru">Поиск сохраненных новостей</string>
+    <string name="account_login_ru">Вход в аккаунт</string>
+    <string name="sign_in_ru">Войти</string>
+    <string name="registration"><u>Регистрация</u></string>
+    <string name="confirm_registration">Подтвердить регистрацию</string>
+    <string name="you_dont_have_saved_news">У вас нет сохранненых новостей</string>
+    <string name="no_internet_connection">Нет соединения \n с интернетом</string>
+    <string name="try_again">Повторить попытку</string>
+    <string name="name">name</string>
+    <string name="guest">Гость</string>
+    <string name="notifications">Уведомления</string>
+    <string name="upload_image">Загрузка изображений</string>
+    <string name="clear_cache">Очистить кэш</string>
+    <string name="disabling_saves_traffic">Отключение помогает экономить трафик</string>
+    <string name="offer_news">Предложить новость</string>
+    <string name="contacts">Контакты</string>
+    <string name="about_geekmedia">Про GeekMedia</string>
+    <string name="information">Информация</string>
+    <string name="edition">Редакция</string>
+    <string name="advertising_department">Отдел рекламы</string>
+    <string name="adress">Адрес</string>
+    <string name="geekmedia_gmail_com">geekmedia@gmail.com</string>
+    <string name="_996_321_12_34_56">+996(321)12-34-56</string>
+    <string name="_996_700_67_89_01">+996(700)67-89-01</string>
+    <string name="_996_701_12_34_56">+996(701)12-34-56</string>
+    <string name="_996_702_67_89_01">+996(702)67-89-01</string>
+    <string name="tv_address">Исы Ахунбаева 145</string>
 
 </resources>

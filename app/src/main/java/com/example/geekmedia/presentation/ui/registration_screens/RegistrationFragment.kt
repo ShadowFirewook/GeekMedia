@@ -1,20 +1,48 @@
 package com.example.geekmedia.presentation.ui.registration_screens
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.geekmedia.R
+import androidx.fragment.app.viewModels
+import com.example.geekmedia.databinding.FragmentRegistrationBinding
+import com.example.geekmedia.domain.models.UserData
+import com.example.geekmedia.presentation.ui.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class RegistrationFragment : Fragment() {
+@AndroidEntryPoint
+class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
 
+    private val viewModel by viewModels<RegistrationViewModel>()
+    private val userData = UserData(first_name = listOf(binding.registration.tvName.text.toString()),
+    listOf(binding.registration.tvSurname.text.toString()),
+        listOf(binding.registration.tvPassword.text.toString()),
+        listOf(binding.registration.phoneNumber.text.toString())
+    )
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registration, container, false)
+    override fun inflateViewBinding(inflater: LayoutInflater): FragmentRegistrationBinding {
+        return FragmentRegistrationBinding.inflate(layoutInflater)
     }
+
+    override fun initRequests() {
+        binding.registration.btnRegister.setOnClickListener {
+            with(binding){
+                if (registration.tvName.text.toString().isNotEmpty() &&
+                    registration.tvSurname.text.toString().isNotEmpty() &&
+                    registration.phoneNumber.text.toString().isNotEmpty() &&
+                    registration.tvPassword.text.toString().isNotEmpty() &&
+                    registration.tvConfirmPassword.text.toString().isNotEmpty()
+                ) {
+//                    viewModel.registerUser(
+//                        userData = userData
+//                    )
+                    } else {
+                        //todo toast
+                }
+
+            }
+        }
+    }
+
+    override fun notifySubscribers() {
+
+    }
+
 }
