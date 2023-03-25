@@ -1,5 +1,6 @@
 package com.example.geekmedia.presentation.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.core.os.bundleOf
@@ -28,7 +29,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             newsList,
             this::onPostClick,
             this::onLikeClick,
-            this::onDislikeClick
+            this::onShareClick
         )
     }
 
@@ -57,23 +58,32 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     onError = {
                         //Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
                     },
-                    onSuccess = {
+                    onSuccess = { news ->
                         binding.progressBar.isVisible = false
                         binding.swipeRefreshData.isVisible = true
                         binding.rvNews.isVisible = true
 
                         newsList.clear()
-                        newsList.addAll(it.results)
+                        newsList.addAll(news.results.sortedByDescending { it.created_date_time })
                         newsAdapter.notifyItemChanged(newsList.lastIndex)
                     }
                 )
         }
 
-
     override fun initView() {
+        openSettings()
+        updateNews()
+    }
+
+    private fun updateNews() {
         binding.swipeRefreshData.setOnRefreshListener {
             binding.swipeRefreshData.isRefreshing = false
-            newsAdapter.notifyItemChanged(newsList.lastIndex)
+        }
+    }
+
+    private fun openSettings(){
+        binding.ivSettings.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_settingsFragment)
         }
     }
 
@@ -81,6 +91,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         findNavController().navigate(
             R.id.action_navigation_home_to_postFragment,
             bundleOf(POST_ID to id))
+    }
+
+    private fun onShareClick(link:String){
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, link)
+            type = "text/plain"
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
     }
 
     private fun onLikeClick(item: News.Item) {
@@ -93,10 +114,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             title = item.title,
             id = item.id
         ))
-    }
-
-    private fun onDislikeClick(item: News.Item) {
-        viewModel.deleteFavoritePost(item)
     }
 
 }

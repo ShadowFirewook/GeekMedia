@@ -46,5 +46,14 @@
     <string name="_996_701_12_34_56">+996(701)12-34-56</string>
     <string name="_996_702_67_89_01">+996(702)67-89-01</string>
     <string name="tv_address">Исы Ахунбаева 145</string>
+    <string name="about_self">О себе</string>
+    <string name="settings">Настройки</string>
+    <string name="backend">Backend</string>
+    <string name="project_management">Project Management</string>
+    <string name="android">Android</string>
+    <string name="events">Events</string>
+    <string name="web_development">Web-Development</string>
+    <string name="mobile_development">Mobile Development</string>
+    <string name="find_article">Найти статью</string>
 
 </resources>

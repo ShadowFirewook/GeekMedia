@@ -16,6 +16,12 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_profile"
             app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_profile2"
+            app:destination="@id/navigation_profile" />
     </fragment>
 
     <fragment
@@ -26,6 +32,9 @@
         <action
             android:id="@+id/action_navigation_favorites_news_to_postFragment"
             app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_navigation_favorites_news_to_settingsFragment2"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
     <fragment
@@ -38,16 +47,27 @@
         android:id="@+id/navigation_search_menu"
         android:name="com.example.geekmedia.presentation.ui.search_menu.SearchMenuFragment"
         android:label="fragment_search_menu"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_menu_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_search_menu_to_filteredNewsFragment"
+            app:destination="@id/filteredNewsFragment" />
+        <action
+            android:id="@+id/action_navigation_search_menu_to_settingsFragment2"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_search_menu_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.geekmedia.presentation.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_navigation_profile_to_geekMediaInformationFragment"
-            app:destination="@id/geekMediaInformationFragment" />
+
     </fragment>
 
     <fragment
@@ -61,5 +81,24 @@
         android:name="com.example.geekmedia.presentation.ui.geekmedia_info_fragment.GeekMediaInformationFragment"
         android:label="fragment_geek_media_information"
         tools:layout="@layout/fragment_geek_media_information" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.geekmedia.presentation.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_geekMediaInformationFragment"
+            app:destination="@id/geekMediaInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filteredNewsFragment"
+        android:name="com.example.geekmedia.presentation.ui.search_menu.FilteredNewsFragment"
+        android:label="fragment_filtered_news"
+        tools:layout="@layout/fragment_filtered_news" >
+        <action
+            android:id="@+id/action_filteredNewsFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
 
 </navigation>
