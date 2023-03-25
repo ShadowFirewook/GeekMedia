@@ -33,6 +33,7 @@ abstract class BaseFragment<VB: ViewBinding>: Fragment() {
         initRequests()
         notifySubscribers()
         initView()
+        initClick()
     }
 
     protected open fun getData() {}
@@ -40,6 +41,7 @@ abstract class BaseFragment<VB: ViewBinding>: Fragment() {
     protected open fun initRequests() {}
     protected open fun notifySubscribers() {}
     protected open fun initView() {}
+    protected open fun initClick() {}
 
     protected fun <T> StateFlow<UIState<T>>.collectState(
         onLoading: () -> Unit,

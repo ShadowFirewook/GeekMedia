@@ -7,7 +7,6 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
 import androidx.room.Room
 import com.example.geekmedia.core.BASE_URL
-import com.example.geekmedia.core.LIKED_NEWS_DATA_STORE
 import com.example.geekmedia.core.USER_DATA_STORE
 import com.example.geekmedia.data.local.FavoritesNewsDao
 import com.example.geekmedia.data.local.FavoritesNewsDatabase
@@ -42,23 +41,33 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+    fun provideApiService(
+        retrofit: Retrofit
+    ): ApiService = retrofit.create(ApiService::class.java)
 
     @Singleton
     @Provides
-    fun provideNewsRepository(apiService: ApiService,likeNewsPrefDataStore: DataStore<Preferences>) : NewsRepository = NewsRepositoryImpl(apiService,likeNewsPrefDataStore)
+    fun provideNewsRepository(
+        apiService: ApiService
+    ) : NewsRepository = NewsRepositoryImpl(apiService)
 
     @Singleton
     @Provides
-    fun providePostRepository(apiService: ApiService) : PostRepository = PostRepositoryImpl(apiService)
+    fun providePostRepository(
+        apiService: ApiService
+    ) : PostRepository = PostRepositoryImpl(apiService)
 
     @Singleton
     @Provides
-    fun provideUserDataRepository(apiService: ApiService) : UserDataRepository = UserDataRepositoryImpl(apiService)
+    fun provideUserDataRepository(
+        apiService: ApiService
+    ) : UserDataRepository = UserDataRepositoryImpl(apiService)
 
     @Singleton
     @Provides
-    fun provideUserPrefDataStoreRepository(userPrefDataStore: DataStore<Preferences>): UserPrefDataStoreRepository = UserPrefDataStoreRepositoryImpl(userPrefDataStore)
+    fun provideUserPrefDataStoreRepository(
+        userPrefDataStore: DataStore<Preferences>
+    ): UserPrefRepository = UserPrefRepositoryImpl(userPrefDataStore)
 
 //    @Singleton
 //    @Provides
@@ -70,11 +79,11 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideLikeNewsPrefDataStore(
+    fun provideUserPref(
         @ApplicationContext context: Context
     ): DataStore<Preferences> = PreferenceDataStoreFactory
         .create(produceFile = {context.preferencesDataStoreFile(
-            LIKED_NEWS_DATA_STORE)})
+            USER_DATA_STORE)})
 
     @Singleton
     @Provides

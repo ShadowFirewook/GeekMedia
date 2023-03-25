@@ -7,10 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
 
-    fun getNews(/*posts: Posts,category: String,createdDate: String, page:Int, pageSize: Int*/ ) : Flow<Status<News>>
+    fun getNews() : Flow<Status<News>>
 
-    fun likeNews(isLiked:Boolean): Flow<Status<Preferences>>
-
-    fun getFavoriteNews(favoritesNews: ArrayList<News.Item>) : Flow<Status<ArrayList<News.Item>>>
 
 }
