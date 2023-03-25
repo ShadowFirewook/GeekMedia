@@ -7,43 +7,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.ui.favorites_news.FavoritesNewsFragment">
 
-    <TextView
-        android:id="@+id/tv_favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/favorites_ru"
-        android:textStyle="bold"
-        android:textSize="32sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="12dp"/>
-
-    <TextView
-        android:id="@+id/tv_news"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/news_ru"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginStart="12dp"
-        app:layout_goneMarginTop="12dp"/>
-
-    <SearchView
-        android:id="@+id/search_view"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="@string/search_for_saved_news_ru"
-        android:iconifiedByDefault="true"
-        android:layout_marginTop="16dp"
-        android:background="@color/very_light_grey"
-        android:layout_marginHorizontal="12dp"/>
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorites_ru"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/lora"
+            android:layout_gravity="center"
+            android:layout_marginVertical="8dp"/>
+
+        <ImageView
+            android:id="@+id/iv_settings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_settings"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/light_grey" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="12dp">
+        android:layout_marginTop="4dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_liked_news"

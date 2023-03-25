@@ -16,13 +16,17 @@ fun Post.toNewsItem() = News.Item(
 
 fun PostEntity.toPost() = Post(
     id,
-    articles = articles.map { Post.Article(description, image, title)},
+    articles = articles.map { it.toArticle()},
     category.toCategory(),
     created_date,
     created_date_time,
     description,
     image,
     title
+)
+
+private fun PostEntity.ArticleEntity.toArticle() = Post.Article(
+    description, image, title
 )
 
 private fun PostEntity.CategoryEntity.toCategory() = Post.Category(

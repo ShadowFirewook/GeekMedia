@@ -14,7 +14,7 @@ class Post(
 ){
     data class Article(
         val description: String,
-        val image: String,
+        val image: String?,
         val title: String
     )
 

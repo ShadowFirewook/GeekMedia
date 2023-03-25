@@ -15,11 +15,10 @@ import com.example.geekmedia.presentation.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FavoritesNewsFragment: BaseFragment<FragmentFavoritesNewsBinding>() {
+class   FavoritesNewsFragment: BaseFragment<FragmentFavoritesNewsBinding>() {
 
     private val viewModel by viewModels<FavoritesNewsViewModel>()
     private lateinit var favoriteNewsAdapter: FavoriteNewsAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +68,16 @@ class FavoritesNewsFragment: BaseFragment<FragmentFavoritesNewsBinding>() {
                 refreshFavoritesNews()
             }
         )
+    }
+
+    override fun initView() {
+        openSettings()
+    }
+
+    private fun openSettings(){
+        binding.ivSettings.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_favorites_news_to_settingsFragment2)
+        }
     }
 
     private fun onDislikeClick(item: News.Item) {
