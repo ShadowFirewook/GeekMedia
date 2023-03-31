@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/andika_new_basic</item>
+        <item>@font/autour_one</item>
+        <item>@font/averia_libre_light</item>
+        <item>@font/copse</item>
+        <item>@font/lora</item>
+        <item>@font/roboto</item>
+    </array>
+</resources>

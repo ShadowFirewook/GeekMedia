@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cv_post"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/iv_favorite_post"
+            android:layout_width="132dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@color/main_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_favorite_post"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="8dp"
+            android:ellipsize="end"
+            android:text="@string/news_ru"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/lora"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_liked"
+            app:layout_constraintStart_toEndOf="@+id/iv_favorite_post"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem/random"
+            />
+
+        <ImageView
+            android:id="@+id/iv_liked"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_liked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</FrameLayout>
